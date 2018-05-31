@@ -108,7 +108,7 @@
 
                 <div class="form">
                     <h2>lets talk<span></span></h2>
-                    <form onsubmit="return onSubmit()" id="contact">
+                    <form id="contact">
                         <label>
                     <input type="text" name="name"  required>
                     <div class="label">Your Name</div>
@@ -140,57 +140,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css"></script>
     <br>
-    <script>function onSubmit(){
 
-alert("sending");
-
-
-var data = JSON.stringify({
-  "personalizations": [
-    {
-      "to": [
-        {
-          "email": "alameen.azad@pm.me",
-          "name": "John Doe"
-        }
-      ],
-      "subject": "Hello, World!"
-    }
-  ],
-  "from": {
-    "email": "sam.smith@example.com",
-    "name": "Sam Smith"
-  },
-  "reply_to": {
-    "email": "sam.smith@example.com",
-    "name": "Sam Smith"
-  },
-  "content": [
-    {
-      "type": "text/plain",
-      "value": "this is my text"
-    }
-  ]
-});
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
-  }
-});
-
-xhr.open("POST", "https://api.sendgrid.com/v3/mail/send");
-xhr.setRequestHeader("authorization", "Bearer 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");
-xhr.setRequestHeader("content-type", "application/json");
-
-xhr.send(data);
-                return false;alert("sending");
-
-        }
-    </script>
 </body>
 
 </html>
