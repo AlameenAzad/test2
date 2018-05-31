@@ -62,46 +62,20 @@ backabout.onclick = function () {
 //    return false;
 //}
 function submit(){
-    var data = JSON.stringify({
-  "personalizations": [
-    {
-      "to": [
-        {
-          "email": "alameen.azad@pm.me",
-          "name": "John Doe"
-        }
-      ],
-      "subject": "Hello, World!"
-    }
-  ],
-  "from": {
-    "email": "sam.smith@example.com",
-    "name": "Sam Smith"
+    var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.sendgrid.com/v3/mail/send",
+  "method": "POST",
+  "headers": {
+    "authorization": "Bearer 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",
+    "content-type": "application/json"
   },
-  "reply_to": {
-    "email": "sam.smith@example.com",
-    "name": "Sam Smith"
-  },
-  "content": [
-    {
-      "type": "text/plain",
-      "value": "this is my text"
-    }
-  ]
-});
+  "processData": false,
+  "data": "{\"personalizations\":[{\"to\":[{\"email\":\"alameen.azad@pm.me\",\"name\":\"John Doe\"}],\"subject\":\"Hello, World!\"}],\"from\":{\"email\":\"sam.smith@example.com\",\"name\":\"Sam Smith\"},\"reply_to\":{\"email\":\"sam.smith@example.com\",\"name\":\"Sam Smith\"},\"content\":[{\"type\":\"text/plain\",\"value\":\"this is my text\"}]}"
+}
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
-  }
-});
-
-xhr.open("POST", "https://api.sendgrid.com/v3/mail/send");
-xhr.setRequestHeader("authorization", "Bearer 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");
-xhr.setRequestHeader("content-type", "application/json");
-
-xhr.send(data);
+$.ajax(settings).done(function (response) {
+  console.log(response);
+})
 }
