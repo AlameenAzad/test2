@@ -47,7 +47,7 @@ function submit() {
         // AJAX code to submit form.
         $.ajax({
             type: "POST",
-            url: "mail.php",
+            url: "http://alameen.rf.gd/mail.php",
             data: {
                 name : name,
                 email: email,
