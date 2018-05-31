@@ -37,27 +37,71 @@ backabout.onclick = function () {
 //        }
 //    });
 //});
-function submit() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var msg = document.getElementById("msg").value;
-
-    var dataString = 'Email from:' + name + 'Email:' + email + '&password1=' + password + '&contact1=' + contact;
-
-        // AJAX code to submit form.
-        $.ajax({
-            type: "POST",
-            url: "http://alameen.rf.gd/mail.php",
-            data: {
-                name : name,
-                email: email,
-                msg: msg
-            },
-            cache: false,
-            success: function (html) {
-                alert("Email submitted to php");
-            }
-        });
+//function submit() {
+//    var name = document.getElementById("name").value;
+//    var email = document.getElementById("email").value;
+//    var msg = document.getElementById("msg").value;
+//
+//    var dataString = 'Email from:' + name + 'Email:' + email + '&password1=' + password + '&contact1=' + contact;
+//
+//        // AJAX code to submit form.
+//        $.ajax({
+//            type: "POST",
+//            url: "http://alameen.rf.gd/mail.php",
+//            data: {
+//                name : name,
+//                email: email,
+//                msg: msg
+//            },
+//            cache: false,
+//            success: function (html) {
+//                alert("Email submitted to php");
+//            }
+//        });
+//    }
+//    return false;
+//}
+function submit(){
+    var data = JSON.stringify({
+  "personalizations": [
+    {
+      "to": [
+        {
+          "email": "alameen.azad@pm.me",
+          "name": "John Doe"
+        }
+      ],
+      "subject": "Hello, World!"
     }
-    return false;
+  ],
+  "from": {
+    "email": "sam.smith@example.com",
+    "name": "Sam Smith"
+  },
+  "reply_to": {
+    "email": "sam.smith@example.com",
+    "name": "Sam Smith"
+  },
+  "content": [
+    {
+      "type": "text/plain",
+      "value": "this is my text"
+    }
+  ]
+});
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "https://api.sendgrid.com/v3/mail/send");
+xhr.setRequestHeader("authorization", "Bearer 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");
+xhr.setRequestHeader("content-type", "application/json");
+
+xhr.send(data);
 }
