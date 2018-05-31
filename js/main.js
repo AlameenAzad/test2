@@ -61,21 +61,4 @@ backabout.onclick = function () {
 //    }
 //    return false;
 //}
-function submit(){
-    var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://api.sendgrid.com/v3/mail/send",
-  "method": "POST",
-  "headers": {
-    "authorization": "Bearer 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",
-    "content-type": "application/json"
-  },
-  "processData": false,
-  "data": "{\"personalizations\":[{\"to\":[{\"email\":\"alameen.azad@pm.me\",\"name\":\"John Doe\"}],\"subject\":\"Hello, World!\"}],\"from\":{\"email\":\"sam.smith@example.com\",\"name\":\"Sam Smith\"},\"reply_to\":{\"email\":\"sam.smith@example.com\",\"name\":\"Sam Smith\"},\"content\":[{\"type\":\"text/plain\",\"value\":\"this is my text\"}]}"
-}
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-})
-}
