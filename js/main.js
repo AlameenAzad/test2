@@ -19,7 +19,7 @@ backabout.onclick = function () {
     menu.classList.toggle("is-active");
     nav.classList.toggle("nav-active");
 }
-
+//TODO: See why the menu is not showing up on Android.
 //function sub(){
 //    XHR = new XMLHttpRequest();
 //    XHR.open('GET', 'https://untitled-2pxai0iw14ew.runkit.sh/?'+form.serialize());

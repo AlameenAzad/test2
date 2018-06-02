@@ -5,16 +5,7 @@ html {
     color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-::-webkit-input-placeholder {
-    font-family: 'Roboto', sans-serif;
-}
-
-:-ms-input-placeholder {
-    font-family: 'Roboto', sans-serif;
 }
 
 ::placeholder {
@@ -64,20 +55,12 @@ html {
     font-size: 2.5rem;
     background-color: #212121;
     z-index: 1000;
-    -webkit-transform: translateX(100vw);
     transform: translateX(100vw);
-    -webkit-transition: -webkit-transform .3s ease-in-out;
-    transition: -webkit-transform .3s ease-in-out;
-    transition: transform .3s ease-in-out;
-    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+    transition: transform .3s ease-in-out
 }
 .nav-active{
-    -webkit-transform: translateX(0vw);
     transform: translateX(0vw);
-    -webkit-transition: -webkit-transform .4s ease-in-out;
-    transition: -webkit-transform .4s ease-in-out;
-    transition: transform .4s ease-in-out;
-    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out
+    transition: transform .4s ease-in-out
 }
 .nav ul {
     list-style-type: none;
@@ -108,20 +91,12 @@ html {
     width: 100%;
     z-index: 9000;
     overflow: auto;
-    -webkit-transform: translateX(-100vw);
     transform: translateX(-100vw);
-    -webkit-transition: -webkit-transform .4s ease-in-out;
-    transition: -webkit-transform .4s ease-in-out;
-    transition: transform .4s ease-in-out;
-    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out
+    transition: transform .4s ease-in-out
 }
 .about-active{
-    -webkit-transform: translateX(0vw);
     transform: translateX(0vw);
-    -webkit-transition: -webkit-transform .4s ease-in-out;
-    transition: -webkit-transform .4s ease-in-out;
-    transition: transform .4s ease-in-out;
-    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out
+    transition: transform .4s ease-in-out
 }
 
 .about h2 {
@@ -196,7 +171,6 @@ h1 {
     font-size: 1.1rem;
     padding: 2vw 3.5vw;
     /*  width: 20px;*/
-    -webkit-transition: all 0.5s;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
@@ -211,7 +185,6 @@ form .button {
     cursor: pointer;
     display: inline-block;
     position: relative;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -221,7 +194,6 @@ form .button {
     opacity: 0;
     top: 0;
     right: -20px;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -258,7 +230,6 @@ form .button {
     -webkit-animation: sdb07 2s infinite;
     animation: sdb07 2s infinite;
     opacity: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -356,7 +327,6 @@ text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 .footer {
-    background: -webkit-gradient(linear, left top, right bottom, from(#512DA8), to(#212121));
     background: linear-gradient(to bottom right, #512DA8, #212121);
     min-height: 100vh;
     margin: 0;
@@ -419,16 +389,13 @@ label {
 }
 
 label .label {
-    -webkit-transform: translateY(-25px);
     transform: translateY(-25px);
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     opacity: 0.6;
 }
 
 label input:focus + .label,
 label input:valid + .label {
-    -webkit-transform: translateY(-50px);
     transform: translateY(-50px);
     font-size: 0.9rem;
 }
@@ -436,20 +403,6 @@ label input:valid + .label {
 .text {
     height: 15vh;
     border: 2px solid #FFFFFF
-}
-
-textarea::-webkit-input-placeholder {
-    color: #FFFFFF;
-    opacity: 0.6;
-    font-size: 1rem;
-    padding: 5px
-}
-
-textarea:-ms-input-placeholder {
-    color: #FFFFFF;
-    opacity: 0.6;
-    font-size: 1rem;
-    padding: 5px
 }
 
 textarea::placeholder {
@@ -505,7 +458,6 @@ textarea::placeholder {
     /*    font-size: 25px;*/
     display: inline-block;
     -webkit-transition: -webkit-transform .5s;
-    transition: -webkit-transform .5s;
     transition: transform .5s;
     transition: transform .5s, -webkit-transform .5s;
     color: #FFFFFF;
@@ -607,6 +559,7 @@ textarea::placeholder {
 .row .three {
     /*  padding: 80px 30px;*/
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #2c3e50;
     color: #ecf0f1;
@@ -621,6 +574,7 @@ textarea::placeholder {
     display: block;
     margin: 0.25rem 0;
     -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 /*        padding: 10px*/
 
@@ -635,33 +589,20 @@ textarea::placeholder {
 }
 
 #hamburger.is-active .line:nth-child(1) {
-    -webkit-transform: translateY( 0.35rem) rotate(45deg);
     transform: translateY( 0.35rem) rotate(45deg);
 }
 
 #hamburger.is-active .line:nth-child(3) {
-    -webkit-transform: translateY(-0.35rem) rotate(-45deg);
     transform: translateY(-0.35rem) rotate(-45deg);
 }
 .inersection{
-    -webkit-transition: -webkit-transform 1s ease;
-    transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
-    transition: transform 1s ease, -webkit-transform 1s ease;
 }
 .pushback{
-    -webkit-transform: scale(0.9);
     transform: scale(0.9);
-    -webkit-transition: -webkit-transform 1s ease;
-    transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
-    transition: transform 1s ease, -webkit-transform 1s ease;
 }
 .pushin{
-    -webkit-transform: scale(1);
     transform: scale(1);
-    -webkit-transition: -webkit-transform 1s ease;
-    transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
-    transition: transform 1s ease, -webkit-transform 1s ease;
 }
