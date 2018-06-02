@@ -24,7 +24,7 @@ function sub(){
     XHR.open('GET', 'https://untitled-2pxai0iw14ew.runkit.sh/');
 
   // Send our FormData object; HTTP headers are set automatically
-  XHR.send('form.serialize()');
+  XHR.send(form.serialize());
     return false;
 }
 function process()
