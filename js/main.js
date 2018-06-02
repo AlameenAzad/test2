@@ -20,7 +20,12 @@ backabout.onclick = function () {
     nav.classList.toggle("nav-active");
 }
 
-
+function process()
+{
+var url="https://untitled-2pxai0iw14ew.runkit.sh/" + form.serialize();
+location.href=url;
+return false;
+}
 
 function SubForm(e){
     e.preventDefault();
