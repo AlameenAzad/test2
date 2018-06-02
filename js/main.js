@@ -19,7 +19,14 @@ backabout.onclick = function () {
     menu.classList.toggle("is-active");
     nav.classList.toggle("nav-active");
 }
+function sub(){
+    XHR = new XMLHttpRequest();
+    XHR.open('GET', 'https://untitled-2pxai0iw14ew.runkit.sh/'+ form.serialize());
 
+  // Send our FormData object; HTTP headers are set automatically
+  XHR.send();
+    return false;
+}
 function process()
 {
 var url="https://untitled-2pxai0iw14ew.runkit.sh/" + form.serialize();
