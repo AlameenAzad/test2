@@ -30,9 +30,9 @@ function SubForm(e){
         url:url,
         type:'get',
         data:data,
-        success:function(){
+        success:function(result){
            //whatever you wanna do after the form is successfully submitted
-            return false;
+            alert(result);
            }
         });
     }
