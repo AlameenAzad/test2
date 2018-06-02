@@ -49,5 +49,5 @@ function SubForm(e){
             alert(result);
            }
         });
-    return false;
+//    return false;
     }
