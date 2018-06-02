@@ -21,10 +21,10 @@ backabout.onclick = function () {
 }
 function sub(){
     XHR = new XMLHttpRequest();
-    XHR.open('GET', 'https://untitled-2pxai0iw14ew.runkit.sh/'+ form.serialize());
+    XHR.open('GET', 'https://untitled-2pxai0iw14ew.runkit.sh/');
 
   // Send our FormData object; HTTP headers are set automatically
-  XHR.send();
+  XHR.send('form.serialize()');
     return false;
 }
 function process()
