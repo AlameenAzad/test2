@@ -58,10 +58,12 @@ html {
     transform: translateX(100vw);
     transition: transform .3s ease-in-out
 }
-.nav-active{
+
+.nav-active {
     transform: translateX(0vw);
     transition: transform .4s ease-in-out
 }
+
 .nav ul {
     list-style-type: none;
     margin: 0;
@@ -94,7 +96,8 @@ html {
     transform: translateX(-100vw);
     transition: transform .4s ease-in-out
 }
-.about-active{
+
+.about-active {
     transform: translateX(0vw);
     transition: transform .4s ease-in-out
 }
@@ -107,15 +110,18 @@ html {
 .about p {
     padding: 5vw
 }
-.backabout{
+
+.backabout {
     position: absolute;
     right: 0;
     font-size: 1.7rem;
-    padding: 0;
+    padding: 3vw;
     margin: 0;
-    margin-top: 1.2vh;
+    /*    margin-top: 1.2vh;*/
     cursor: pointer;
+
 }
+
 .icons-about {
     margin: 0% 15% 0% 15%;
     padding: 4%;
@@ -281,15 +287,19 @@ form .button {
     position: relative;
     z-index: -2;
 }
-#project1{
+
+#project1 {
     background-image: url(../pic/carbon.png);
 }
-#project2{
+
+#project2 {
     background-image: url(../pic/cover.jpg);
 }
-#project3{
+
+#project3 {
     background-image: url(../pic/shosho.jpg);
 }
+
 .projects .p1 {
     height: 100%;
     width: 100%;
@@ -305,16 +315,14 @@ form .button {
 
 .pinfo {
     padding: 40vh 5vw 5vw 5vw;
-/*    z-index: 99999;*/
-
+    /*    z-index: 99999;*/
 }
 
 .pinfo h2 {
     margin: 0;
     text-transform: uppercase;
-/*    background-color: #212121*/
-
-text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    /*    background-color: #212121*/
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 
 }
 
@@ -322,8 +330,7 @@ text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
     background-color: #512DA8;
     padding: 3vw;
     font-size: 0.9rem;
-/*    text-shadow: 0 28px 50px rgba(0, 0, 0, 0.8);*/
-
+    /*    text-shadow: 0 28px 50px rgba(0, 0, 0, 0.8);*/
 }
 
 .footer {
@@ -449,7 +456,7 @@ textarea::placeholder {
 }
 
 .icon {
-    font-family: social!important;
+    font-family: social !important;
     speak: none;
     font-variant: normal;
     text-transform: none;
@@ -504,7 +511,83 @@ textarea::placeholder {
     color: #000
 }
 
+.hamburger {
+    /*     width: 25vw;*/
+    margin: 3vw 3.5vw 0 0;
+    position: fixed;
+    z-index: 2000;
+    right: 0;
+
+
+}
+
+.row .three {
+    /*  padding: 80px 30px;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    /*    padding: 10px*/
+}
+
+.hamburger .line {
+    width: 1.3rem;
+    height: 2px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 0.25rem 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    /*        padding: 10px*/
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+#hamburger.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger.is-active .line:nth-child(1) {
+    transform: translateY( 0.35rem) rotate(45deg);
+}
+
+#hamburger.is-active .line:nth-child(3) {
+    transform: translateY(-0.35rem) rotate(-45deg);
+}
+
+.inersection {
+    transition: transform 1s ease;
+}
+
+.pushback {
+    transform: scale(0.9);
+    transition: transform 1s ease;
+}
+
+.pushin {
+    transform: scale(1);
+    transition: transform 1s ease;
+}
+
+@media (min-width: 600px) {
+    .main img {
+        width: 20vw
+    }
+}
+
 @media (min-width:768px) {
+    .hamburger {
+        visibility: hidden;
+    }
+    .main img {
+        width: 7rem;
+        margin: 1.5rem 0 0 1.5rem
+    }
     .main img,
     .menu,
     .nav {
@@ -525,16 +608,14 @@ textarea::placeholder {
         left: 0;
         top: 25px;
         margin: auto;
-        width: 50%;
+        /*        width: 50%;*/
+        transform: translateX(0vw);
+        background-color: transparent;
+        font-size: 1rem;
+        height: auto;
+        width: auto
+    }
 
-    }
-    .nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        text-transform: uppercase;
-    }
     .nav li {
         display: inline;
 
@@ -544,65 +625,115 @@ textarea::placeholder {
 
         padding: 0 15px;
     }
-}
+    .button {
+        border-radius: 4px;
+        font-size: 1.1rem;
+        padding: 1.5vw 2.5vw;
+        margin: 5px;
+    }
+    .bio {
+        width: 50%
+    }
+    .backabout {
+        font-size: 1.7rem;
+        margin-top: 0;
 
-.hamburger {
-    /*     width: 25vw;*/
-    margin: 3vw 3.5vw 0 0;
-    position: fixed;
-    z-index: 2000;
-    right: 0;
+    }
+    .sm br{
+        display: none
+    }
 
+    @media(min-width:992px) {
+        .bio {
+            width: 40%;
+        }
+        .pinfo p {
+            width: 60%;
+            padding: 1.5vw
+        }
+        .button {
+            padding: 1vw 2vw
+        }
+        .about {
+            width: 35%
+        }
+        .about h2 {
+            padding: 2vw;
+        }
 
-}
+        .about p {
+            padding: 2vw
+        }
+        .backabout {
+            position: absolute;
+            right: 0;
+            font-size: 1.7rem;
+            padding: 3vw;
+            margin: 0;
+                margin-top: 2.2vh;
+            cursor: pointer;
 
-.row .three {
-    /*  padding: 80px 30px;*/
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-/*    padding: 10px*/
-}
+        }
+        .icons-about {
+            margin: 0% 15% 0% 15%;
+            padding: 4%;
+            /*    font-size: 0.3rem;*/
+            text-align: center;
+        }
 
-.hamburger .line {
-    width: 1.3rem;
-    height: 2px;
-    background-color: #ecf0f1;
-    display: block;
-    margin: 0.25rem 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-/*        padding: 10px*/
+        .icons-about .icon {
+            font-size: 1.9rem
+        }
+        .footer{
+/*            padding: 0 */
+            margin: 0;
+            overflow-x: hidden
+        }
+        .form{
+            width: 50%;
+            float: left
+        }
+        .sm{
+            width: 50%;
+            text-align: center;
+            float: left;
 
-}
+        }
+        .sm span{
+            visibility: hidden;
+        }
+        .sm h2{
+            margin-top: 15vh;
+            text-align: center;
+            margin-bottom: 10vh
+        }
 
-.hamburger:hover {
-    cursor: pointer;
-}
+        .footer{
+            position: relative
+        }
+        .footer p{
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0vh;
+            font-size: .8rem
+        }
+        .sm p{
+            position: relative;
+            font-size: 1rem;
+            margin-top: 10vh;
+        }
+        .sm br{
+            display: block;
+        }
+        .sm .icon{
+            font-size: 5rem;
+            margin: 1vw;
 
-#hamburger.is-active .line:nth-child(2) {
-    opacity: 0;
-}
-
-#hamburger.is-active .line:nth-child(1) {
-    transform: translateY( 0.35rem) rotate(45deg);
-}
-
-#hamburger.is-active .line:nth-child(3) {
-    transform: translateY(-0.35rem) rotate(-45deg);
-}
-.inersection{
-    transition: transform 1s ease;
-}
-.pushback{
-    transform: scale(0.9);
-    transition: transform 1s ease;
-}
-.pushin{
-    transform: scale(1);
-    transition: transform 1s ease;
-}
+        }
+/*        TODO: change font size on this width and find new image for the seconed project*/
+/*        TODO: change button at top to download resume.*/
+/*        FUTURE: Should build a chatbot for myself and add it on this website*/
+/*        FUTURE: Do not change this desing this is the final portfolio unless i am 100% sure I have greate idea.*/
+/*        NOTE: Should I add the upcoming proects?*/
+    }
