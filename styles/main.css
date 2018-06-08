@@ -326,6 +326,7 @@ form .button {
 
 }
 
+
 .pinfo p {
     background-color: #512DA8;
     padding: 3vw;
@@ -573,9 +574,11 @@ textarea::placeholder {
     transform: scale(1);
     transition: transform 1s ease;
 }
-    .sm br{
-        display: none
-    }
+
+.sm br {
+    display: none
+}
+
 @media (min-width: 600px) {
     .main img {
         width: 20vw
@@ -644,11 +647,12 @@ textarea::placeholder {
 
 
     @media(min-width:992px) {
+
         .bio {
             width: 40%;
         }
         .pinfo p {
-            width: 60%;
+            width: 55%;
             padding: 1.5vw
         }
         .button {
@@ -670,7 +674,7 @@ textarea::placeholder {
             font-size: 1.7rem;
             padding: 3vw;
             margin: 0;
-                margin-top: 2.2vh;
+            margin-top: 2.2vh;
             cursor: pointer;
 
         }
@@ -684,56 +688,92 @@ textarea::placeholder {
         .icons-about .icon {
             font-size: 1.9rem
         }
-        .footer{
-/*            padding: 0 */
+        .footer {
+            /*            padding: 0 */
             margin: 0;
             overflow-x: hidden
         }
-        .form{
+        .form {
             width: 50%;
             float: left
         }
-        .sm{
+        .sm {
             width: 50%;
             text-align: center;
             float: left;
 
         }
-        .sm span{
+        .sm span {
             visibility: hidden;
         }
-        .sm h2{
+        .sm h2 {
             margin-top: 15vh;
             text-align: center;
             margin-bottom: 10vh
         }
 
-        .footer{
+        .footer {
             position: relative
         }
-        .footer p{
+        .footer p {
             position: absolute;
             right: 0;
             left: 0;
             bottom: 0vh;
             font-size: .8rem
         }
-        .sm p{
+        .sm p {
             position: relative;
             font-size: 1rem;
             margin-top: 10vh;
         }
-        .sm br{
+        .sm br {
             display: block;
         }
-        .sm .icon{
+        .sm .icon {
             font-size: 5rem;
             margin: 1vw;
 
         }
-/*        TODO: change font size on this width and find new image for the seconed project*/
-/*        TODO: change button at top to download resume.*/
-/*        FUTURE: Should build a chatbot for myself and add it on this website*/
-/*        FUTURE: Do not change this desing this is the final portfolio unless i am 100% sure I have greate idea.*/
-/*        NOTE: Should I add the upcoming proects?*/
+        .intro h1 {
+            font-size: 10rem;
+            padding-top: 15vh
+        }
+        .intro .bio p {
+            padding: 2vw;
+            font-size: 1.1rem
+        }
+        .cta {
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+        .pinfo h2 {
+            font-size: 2rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+        }
+        .pinfo {
+            padding: 40vh 5vw 5vw 3vw;
+        }
     }
+    @media(min-width:1200px) {
+        .intro .bio{
+            width: 35%
+        }
+        .pinfo{
+            padding: 35vh 5vw 5vw 3vw;
+        }
+        .pinfo p{
+            font-size: 1.2rem;
+        }
+        .pinfo h2{
+            font-size: 2.5rem;
+
+        }
+
+    }
+    /*        TODO: change font size on this width and find new image for the seconed project*/
+    /*        TODO: change button at top to download resume.*/
+    /*        FUTURE: Should build a chatbot for myself and add it on this website*/
+    /*        FUTURE: Do not change this desing this is the final portfolio unless i am 100% sure I have greate idea.*/
+    /*        NOTE: Should I add the upcoming proects?*/
+}
