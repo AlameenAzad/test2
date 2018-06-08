@@ -285,7 +285,7 @@ form .button {
     padding: 0;
     margin: 0;
     position: relative;
-    z-index: -2;
+    z-index: 1;
 }
 
 #project1 {
@@ -294,6 +294,7 @@ form .button {
 
 #project2 {
     background-image: url(../pic/cover.jpg);
+
 }
 
 #project3 {
@@ -312,7 +313,10 @@ form .button {
     bottom: 0;
     z-index: -1;
 }
-
+#project2{
+/*    background-size:auto;*/
+    background-position: right
+}
 .pinfo {
     padding: 40vh 5vw 5vw 5vw;
     /*    z-index: 99999;*/
@@ -561,19 +565,6 @@ textarea::placeholder {
     transform: translateY(-0.35rem) rotate(-45deg);
 }
 
-.inersection {
-    transition: transform 1s ease;
-}
-
-.pushback {
-    transform: scale(0.9);
-    transition: transform 1s ease;
-}
-
-.pushin {
-    transform: scale(1);
-    transition: transform 1s ease;
-}
 
 .sm br {
     display: none
@@ -771,6 +762,21 @@ textarea::placeholder {
         }
 
     }
+    .btn-shake:hover {
+  animation: shake 100ms linear;
+  animation-iteration-count: 5;
+}
+
+
+@keyframes shake {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
     /*        TODO: change font size on this width and find new image for the seconed project*/
     /*        TODO: change button at top to download resume.*/
     /*        FUTURE: Should build a chatbot for myself and add it on this website*/
