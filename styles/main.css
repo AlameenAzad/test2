@@ -573,7 +573,9 @@ textarea::placeholder {
     transform: scale(1);
     transition: transform 1s ease;
 }
-
+    .sm br{
+        display: none
+    }
 @media (min-width: 600px) {
     .main img {
         width: 20vw
@@ -639,9 +641,7 @@ textarea::placeholder {
         margin-top: 0;
 
     }
-    .sm br{
-        display: none
-    }
+
 
     @media(min-width:992px) {
         .bio {
