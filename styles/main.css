@@ -565,9 +565,27 @@ textarea::placeholder {
     transform: translateY(-0.35rem) rotate(-45deg);
 }
 
-
+.form h5{
+    color: #f9f9f9;
+    background-color: #428bca;
+    padding: .5rem;
+    border-radius: 4px;
+    font-weight: 100;
+}
+.form .sucess{
+    max-height: 0;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+.form .active{
+    max-height: 100vh;
+    transition: all 1s 1s ease-in-out;
+}
 .sm br {
     display: none
+}
+#aboutlink{
+    cursor: pointer;
 }
 
 @media (min-width: 600px) {
@@ -759,6 +777,9 @@ textarea::placeholder {
         .pinfo h2{
             font-size: 2.5rem;
 
+        }
+        .about{
+            width: 25%
         }
 
     }

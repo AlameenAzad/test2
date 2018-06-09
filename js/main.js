@@ -3,7 +3,8 @@ const nav = document.getElementById("nav");
 const about = document.getElementById("about");
 const aboutlink = document.getElementById("aboutlink");
 const backabout = document.getElementById("backabout");
-const form = document.getElementById("form")
+const form = document.getElementById("form");
+const suc = document.getElementById("suc");
 menu.onclick = function () {
     menu.classList.toggle("is-active");
     nav.classList.toggle("nav-active");
@@ -19,6 +20,12 @@ backabout.onclick = function () {
     menu.classList.toggle("is-active");
     nav.classList.toggle("nav-active");
 }
+form.onsubmit = function(){
+    suc.classList.toggle("active");
+}
+
+	var scroll = new SmoothScroll('a[href*="#"]');
+
 //TODO: See why the menu is not showing up on Android.
 //function sub(){
 //    XHR = new XMLHttpRequest();
