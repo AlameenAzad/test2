@@ -2,18 +2,27 @@ const menu = document.getElementById("hamburger");
 const nav = document.getElementById("nav");
 const about = document.getElementById("about");
 const aboutlink = document.getElementById("aboutlink");
+const homelink = document.getElementById("homelink");
+const projectslink = document.getElementById("projectslink");
+const contactlink = document.getElementById("contactlink");
 const backabout = document.getElementById("backabout");
 const form = document.getElementById("form");
 const suc = document.getElementById("suc");
+function navOut(){
+    menu.classList.toggle("is-active");
+    nav.classList.toggle("nav-active");
+}
 menu.onclick = function () {
     menu.classList.toggle("is-active");
     nav.classList.toggle("nav-active");
 
 }
+homelink.onclick = function(){navOut()};
+projectslink.onclick = function(){navOut()};
+contactlink.onclick = function(){navOut()};
 aboutlink.onclick = function () {
     about.classList.toggle("about-active");
-    menu.classList.toggle("is-active");
-    nav.classList.toggle("nav-active");
+    navOut();
 }
 backabout.onclick = function () {
     about.classList.toggle("about-active");
